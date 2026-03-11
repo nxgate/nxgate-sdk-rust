@@ -1,0 +1,25 @@
+[package]
+name = "nxgate"
+version = "1.0.0"
+edition = "2021"
+description = "SDK oficial NXGATE para integração PIX (cash-in, cash-out, saldo e webhooks)"
+license = "MIT"
+repository = "https://github.com/nxgate/sdk-rust"
+keywords = ["pix", "nxgate", "payments", "fintech", "brazil"]
+categories = ["api-bindings", "finance"]
+authors = ["NXGATE <contato@nxgate.com.br>"]
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hmac = "0.12"
+sha2 = "0.10"
+tokio = { version = "1", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "2"
+base64 = "0.22"
+rand = "0.8"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }
